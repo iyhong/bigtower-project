@@ -3,7 +3,8 @@
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
+
+<script type="text/javascript">
 	$( document ).ready(function() {
 		
 		//질병 추가버튼 클릭시 이벤트
@@ -35,12 +36,12 @@
 			}if($("#hoTreatmentContents").val()===""){
 				alert("진료내용을 입력하세요!");
 				return;
-			}if($("#hoOperationTypeCode").val()!=="0"){
+			}if($("#hoOperationTypeCode option:selected").val()!=="0"){
 				if($("#hoOperationStartDate").val()===""){
 					alert("수술예정일을 선택하세요");
 					return;
 				}
-			}if($("#hoVaccineTypeCode").val()!=="0"){
+			}if($("#hoVaccineTypeCode option:selected").val()!=="0"){
 				if($("#hoVaccineDate").val()===""){
 					alert("예방접종일을 선택하세요");
 					return;
@@ -198,13 +199,11 @@ align : right;
 	                       <div class="accordion-inner">
 					   			<div>
 						   			수술날짜 :
-						   		
-
 						   			<input type="date" name="hoOperationStartDate" id="hoOperationStartDate">
 					   			</div>
 					   			<div>
 						   			수술명 :
-									<select name="hoOperationTypeCode" id="#hoOperationTypeCode">
+									<select name="hoOperationTypeCode" id="hoOperationTypeCode">
 										<option value="0">:::수술을 선택하시오:::</option>
 										<c:forEach items="${operationList}" var="operationList">
 											<option value="${operationList.hoOperationTypeCode}">${operationList.hoOperationTypeCode}(${operationList.hoOperationTypeName})</option>
@@ -228,7 +227,7 @@ align : right;
 	                       <div class="accordion-inner">
 					   			<div>
 									예방접종 종류 : 
-									<select name="hoVaccineTypeCode" id="#hoVaccineTypeCode">
+									<select name="hoVaccineTypeCode" id="hoVaccineTypeCode">
 										<option value="0">:::예방 접종 종류를 선택하시오:::</option>
 										<c:forEach items="${vaccineList}" var="vaccineList">
 												<option value="${vaccineList.hoVaccineTypeCode}">${vaccineList.hoVaccineTypeName}</option>
