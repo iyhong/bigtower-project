@@ -14,6 +14,8 @@
 	<link href="<c:url value="/resources/bootstrap/css/font-awesome.css"/>" rel="stylesheet">
 	<link href="<c:url value="/resources/bootstrap/css/style.css"/>" rel="stylesheet">
 	<link href="<c:url value="/resources/bootstrap/css/pages/dashboard.css"/>" rel="stylesheet">
+	<link href="<c:url value="/resources/bootstrap/css/style.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/bootstrap/js/guidely/guidely.css"/>" rel="stylesheet"> 
 	<script src="<c:url value="/resources/bootstrap/js/jquery-1.7.2.min.js"/>"></script> 
 	<script src="<c:url value="/resources/bootstrap/js/excanvas.min.js"/>"></script> 
 	<script src="<c:url value="/resources/bootstrap/js/chart.min.js"/>" type="text/javascript"></script> 
