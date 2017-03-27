@@ -54,7 +54,6 @@ public class HospitalDao {
 	}
 	//일주일 진단된 질병 순위
 	public List<HoStatistics> weekDiseaseCodeRanking(Map<String, Object> map){
-		System.out.println("들어오냐 들어오냐");
 		return sql.selectList("hospital.weekDiseaseCodeRanking", map);
 	}
 	//한달 진단된 질병 순위
