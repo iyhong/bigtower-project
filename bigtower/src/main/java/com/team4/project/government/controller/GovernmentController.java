@@ -109,15 +109,15 @@ public class GovernmentController {
 	public String getData(){
 		String doctorId = "";
 		//List<HoMedicine> list1 = GetReferenceData.getMedicineCode(doctorId);
-		//System.out.println("list1"+list1);
+		//logger.debug("list1"+list1);
 		//List<HoDisease> list2 = GetReferenceData.getDiseaseCode(doctorId);
-		//System.out.println("list2"+list2);
+		//logger.debug("list2"+list2);
 		//List<HoOperationType> list3 = GetReferenceData.getSurgeryCode(doctorId);
-		//System.out.println("list3"+list3);
+		//logger.debug("list3"+list3);
 		//List<HoTreatSubject> list4 = GetReferenceData.getTreatSubjectCode(doctorId);
-		//System.out.println("list4"+list4);
+		//logger.debug("list4"+list4);
 		List<HoVaccineType> list5 = GetReferenceData.getVaccinationCode(doctorId);
-		System.out.println("list5"+list5);
+		logger.debug("list5"+list5);
 		
 		return "home";
 	}

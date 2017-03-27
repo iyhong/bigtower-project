@@ -2,46 +2,45 @@
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<script src="js/guidely/guidely.min.js"></script>
 
-<script>
-
-$(function () {
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
 	
-	guidely.add ({
-		attachTo: '#target-1'
-		, anchor: 'top-left'
-		, title: 'Guide Title'
-		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+	<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-right'
+			, title: '방문자 통계'
+			, text: '우리병원에 년간/월간/일일 방문자 통계입니다.'
+		});
+		
+		guidely.add ({
+			attachTo: '#target-2'
+			, anchor: 'top-right'
+			, title: '진료 통계'
+			, text: '진료 통계를 보여줍니다./'
+		});
+		
+		guidely.add ({
+			attachTo: '#target-3'
+			, anchor: 'top-right'
+			, title: 'Guide Title'
+			, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+		});
+		
+		guidely.add ({
+			attachTo: '#target-4'
+			, anchor: 'top-right'
+			, title: 'Guide Title'
+			, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+		});
+		
+		guidely.init ({ welcome: true, startTrigger: false });
 	});
-	
-	guidely.add ({
-		attachTo: '#target-2'
-		, anchor: 'top-right'
-		, title: 'Guide Title'
-		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
-	});
-	
-	guidely.add ({
-		attachTo: '#target-3'
-		, anchor: 'middle-middle'
-		, title: 'Guide Title'
-		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
-	});
-	
-	guidely.add ({
-		attachTo: '#target-4'
-		, anchor: 'top-right'
-		, title: 'Guide Title'
-		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
-	});
-	
-	guidely.init ({ welcome: true, startTrigger: false });
-
-
-});
-
-</script>
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
 <style>
 <!--
 .mainSub {
@@ -104,7 +103,7 @@ $(function () {
 			          </div>
 			          <!-- /widget -->
 			          
-			          <div class="widget widget-nopad">
+			          <div id="target-2" class="widget widget-nopad">
 			            <div class="widget-header"> <i class="icon-list-alt"></i>
 			              <h3>진료 통계</h3>
 			            </div>
@@ -178,7 +177,7 @@ $(function () {
 			          </div>
 			          <!-- /widget -->
 			          
-			          <div class="widget widget-nopad">
+			          <div id="target-3" class="widget widget-nopad">
 			            <div class="widget-header"> <i class="icon-list-alt"></i>
 			              <h3> 질병 통계</h3>
 			            </div>
@@ -250,7 +249,7 @@ $(function () {
 			          </div>
 			          <!-- /widget -->
 			          
-			          <div class="widget widget-nopad">
+			          <div id="target-4" class="widget widget-nopad">
 			            <div class="widget-header"> <i class="icon-list-alt"></i>
 			              <h3> 약품 통계</h3>
 			            </div>
