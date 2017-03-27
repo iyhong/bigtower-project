@@ -24,13 +24,13 @@ public class GetReferenceData {
 	private static String url = ContextParam.context.getInitParameter("receiveUrl");
 	
 	// 1정부에서 투약코드 가져오는 메서드
-	public static List<HoMedicine> getMedicineCode(String doctorId){
+	public static List<HoMedicine> getMedicineCode(String hospitalId){
 		HttpUrlCon conn = new HttpUrlCon(url+"/bigbang/government/getMedicineCode");
 		List<HoMedicine> list = new ArrayList<HoMedicine>();
 		try {
 			// doctorId를 맵에 담는다
 			Map<String, String> map = new HashMap<String, String>();
-			map.put("doctorId", doctorId);
+			map.put("hospitalId", hospitalId);
 			// 맵을 위 url로 전송하고 약 리스트를 리턴받는다
 			String result = conn.HttpUrlPOST(map);
 			logger.debug("result:"+result);

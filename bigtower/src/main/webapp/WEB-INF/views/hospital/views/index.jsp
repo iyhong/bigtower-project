@@ -2,6 +2,46 @@
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="js/guidely/guidely.min.js"></script>
+
+<script>
+
+$(function () {
+	
+	guidely.add ({
+		attachTo: '#target-1'
+		, anchor: 'top-left'
+		, title: 'Guide Title'
+		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+	});
+	
+	guidely.add ({
+		attachTo: '#target-2'
+		, anchor: 'top-right'
+		, title: 'Guide Title'
+		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+	});
+	
+	guidely.add ({
+		attachTo: '#target-3'
+		, anchor: 'middle-middle'
+		, title: 'Guide Title'
+		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+	});
+	
+	guidely.add ({
+		attachTo: '#target-4'
+		, anchor: 'top-right'
+		, title: 'Guide Title'
+		, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+	});
+	
+	guidely.init ({ welcome: true, startTrigger: false });
+
+
+});
+
+</script>
 <style>
 <!--
 .mainSub {
@@ -19,12 +59,13 @@
 -->
 </style>
 
+
 <div class="mainSub">
 	<div class="main-inner">
 		<div class="container">
 			<div class="row">
 				<div class="span6">
-					<div class="widget widget-nopad">
+					<div id="target-1" class="widget widget-nopad">
 			            <div class="widget-header"> <i class="icon-list-alt"></i>
 			              <h3> 방문자 통계</h3>
 			            </div>

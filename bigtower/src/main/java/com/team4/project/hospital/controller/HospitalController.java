@@ -34,7 +34,7 @@ public class HospitalController {
 		String hoHospitalCode = (String) session.getAttribute("HOSPITALCODE");
 		String doctorId = (String) session.getAttribute("DOCTORID");
 		Map<String,String> map = new HashMap<String, String>();
-		map.put("doctorId", doctorId);
+		map.put("hospitalId", hoHospitalCode);
 		String url = ContextParam.context.getInitParameter("receiveUrl");
 		HttpUrlCon firstHttpUrlcon = new HttpUrlCon(url+"/bigbang/government/getDiseaseCode");
 		try{

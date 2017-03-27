@@ -89,18 +89,18 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		
-		<!-- 
+		
 		<property name="url" value="jdbc:mysql://loverman85.cafe24.com:3306/loverman85?useUnicode=true&amp;characterEncoding=utf-8" />
-		 -->
+		
 		 
-		 
-		<!-- <property name="url" value="jdbc:mysql://localhost:3306/hospital?useUnicode=true&amp;characterEncoding=utf-8" />
+		<!--  
+		<property name="url" value="jdbc:mysql://localhost:3306/loverman85?useUnicode=true&amp;characterEncoding=utf-8" />
 		 -->
 		
 		<!-- 작업시  -->
-		
+		<!-- 
 		<property name="url" value="jdbc:mysql://bluesang7.cafe24.com:3306/bluesang7?useUnicode=true&amp;characterEncoding=utf-8" />
-		
+		 -->
 		 <!-- 
 		<property name="url" value="jdbc:mysql://ryun215.cafe24.com:3306/ryun215?useUnicode=true&amp;characterEncoding=utf-8" />
 		 -->
@@ -117,7 +117,7 @@
 		<property name="username" value="loverman85" />
 		-->
 		<!-- <property name="username" value="myeong3695" /> -->
-		<property name="username" value="bluesang7" />
+		<property name="username" value="loverman85" />
 		
 		<property name="password" value="java5963" />
 	</bean>
