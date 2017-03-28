@@ -20,21 +20,89 @@
 			attachTo: '#target-2'
 			, anchor: 'top-right'
 			, title: '진료 통계'
-			, text: '진료 통계를 보여줍니다./'
+			, text: '우리병원에서 년간/월간/일일별 진료한 진료과목 상위3개를 보여줍니다. 예)순위:진료과목(횟수)'
 		});
 		
 		guidely.add ({
 			attachTo: '#target-3'
 			, anchor: 'top-right'
-			, title: 'Guide Title'
-			, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+			, title: '질병 통계'
+			, text: '우리병원에서 년간/월간/주간별 진단한 질병 상위3개를 보여줍니다. 예)순위:질병명(횟수)'
 		});
 		
 		guidely.add ({
 			attachTo: '#target-4'
 			, anchor: 'top-right'
-			, title: 'Guide Title'
-			, text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.'
+			, title: '약품 통계'
+			, text: '우리병원에 년간/월간/주간별 처방한 약품 상위3개를 보여줍니다. 예)순위:약품명(횟수)'
+		});
+		
+		
+		guidely.add ({
+			attachTo: '#menu-1'
+			, anchor: 'top-right'
+			, title: '접수 메뉴'
+			, text: '환자를 등록하고 접수합니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-2'
+			, anchor: 'top-right'
+			, title: '진료 메뉴'
+			, text: '의사만 사용가능, 진료대기자를 확인하고 환자를 진료하며 진단, 처방, 검사요청, 입퇴원요청, 수술요청, 예방접종요청등을 합니다.'
+		}); 
+		guidely.add ({
+			attachTo: '#menu-3'
+			, anchor: 'top-right'
+			, title: '혈액검사 메뉴'
+			, text: '혈액을 체취하고, 검사결과를 혈소판, 혈당 수치와 이미지파일을 등록합니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-4'
+			, anchor: 'top-right'
+			, title: '영상검사 메뉴'
+			, text: '영상검사를 완료하고, 결과를 이미지파일로 등록합니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-5'
+			, anchor: 'top-right'
+			, title: '건강검진 메뉴'
+			, text: '건강검진 검사를 완료하고, 결과를 이미지파일로 등록합니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-6'
+			, anchor: 'top-right'
+			, title: '입 퇴원 메뉴'
+			, text: '환자의 입원 및 퇴원처리를 합니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-7'
+			, anchor: 'top-right'
+			, title: '수술 메뉴'
+			, text: '수술종료후 수술일지를 등록합니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-8'
+			, anchor: 'top-right'
+			, title: '수납 메뉴'
+			, text: '수납처리를 통해 병원 프로세스를 마무리합니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-9'
+			, anchor: 'top-right'
+			, title: '환자 기록 메뉴'
+			, text: '의사만 사용가능, 정부에 저장된 환자의 기록을 조회할수 있습니다.'
+		});
+		guidely.add ({
+			attachTo: '#menu-10'
+			, anchor: 'top-right'
+			, title: '정부 RESTful API'
+			, text: '정부에서 제공하는 RESTful API 명세서를 볼수있습니다.'
+		});
+		guidely.add ({
+			attachTo: '#loginfo'
+			, anchor: 'top-right'
+			, title: '로그인 정보'
+			, text: '로그인 정보를 확인하고, 로그아웃을 할수 있습니다.'
 		});
 		
 		guidely.init ({ welcome: true, startTrigger: false });
