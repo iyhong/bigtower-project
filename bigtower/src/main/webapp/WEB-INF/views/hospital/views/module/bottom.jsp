@@ -36,8 +36,8 @@
                             		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-유효성검사<br/>
                             		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                             </li>
-                		    <li><i class="icon-phone"> phone: 010-8582-5963</i></li>
-                            <li><i class="icon-envelope-alt"> email: loverman85@hanmail.net</i></li>
+                		    <li><i class="icon-phone"> phone: 010-3420-8912</i></li>
+                            <li><i class="icon-envelope-alt"> email: myeong3695@naver.com</i></li>
                             <li><i class="icon-globe"></i> blog:<a href="http://blog.naver.com/myeong3695" target="_blank"> http://blog.naver.com/myeong3695</a></li>
                             <li><i class="icon-github"></i> git:<a href="https://github.com/kahans" target="_blank"> https://github.com/kahans</a></li>
                             <li><i class="icon-globe"></i> portfolio:<a href="http://myeong3695.cafe24.com/" target="_blank"> http://myeong3695.cafe24.com/</a></li>
