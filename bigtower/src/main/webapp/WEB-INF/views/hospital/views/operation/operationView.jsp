@@ -7,8 +7,19 @@
 <script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
 <script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
 <script>
-
 	$(document).ready(function() {
+		function getDateDiff(date1,date2) {
+		    console.log('getDateDiff 함수실행');
+		    var arrDate1 = date1.split("-");
+		    var getDate1 = new Date(parseInt(arrDate1[0]),parseInt(arrDate1[1])-1,parseInt(arrDate1[2]));
+		    console.log('getDate1 : '+getDate1);
+		    var arrDate2 = date2.split("-");
+		    var getDate2 = new Date(parseInt(arrDate2[0]),parseInt(arrDate2[1])-1,parseInt(arrDate2[2]));
+		    console.log('getDate2 : '+getDate2);
+		    var getDiffTime = getDate1.getTime() - getDate2.getTime();
+		    return Math.floor(getDiffTime / (1000 * 60 * 60 * 24));
+		  }
+		
 		$(function () {
 			guidely.add ({
 				attachTo: '#target-1'
@@ -20,14 +31,29 @@
 			guidely.init ({ welcome: true, startTrigger: false });
 		});
 		$("#submitBtn").click(function() {
+			if($("#hoOperationDiary").val()===""){
+				alert("수술일지를 작성해주세요");
+				return;
+			}
+			
 			if($("#hoOperationEndDate").val()===""){
 				alert("수술종료시간을 입력하세요");
 				return;
 			}
 			
-			
 			else{
-				$("#operationForm").submit();	
+				var startDate = $('#hoOperationStartDate').val();
+				var endDate = $('#hoOperationEndDate').val();
+				console.log('시작일 : '+startDate+" 종료일:"+endDate);
+				var result = getDateDiff(startDate, endDate);
+				console.log('result:'+result);
+			 	if(result>0){
+					alert('수술예정일 이후로 날짜를 입력해주세요')
+					return;
+				}else{
+					$("#operationForm").submit();					
+				}
+					
 			}
 			
 		});
@@ -110,7 +136,7 @@
 													<label class="control-label" for="password2">수술일지 :
 													</label>
 													<div class="controls">
-														<textarea class="form-control" cols="100" rows="10"
+														<textarea id ="hoOperationDiary" class="form-control" cols="100" rows="10"
 															name="hoOperationDiary"
 															style="max-width: 57%; width: 57%;">${hoOperation.hoOperationDiary}</textarea>
 													</div>
