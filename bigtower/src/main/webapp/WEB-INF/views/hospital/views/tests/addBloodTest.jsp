@@ -2,12 +2,32 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
 
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		
+		guidely.add ({
+			attachTo: '#widget-1'
+			, anchor: 'top-right'
+			, title: '혈액 검사 결과 등록'
+			, text: '결과 등록시 혈당, 혈소판을 입력하여 값을 등록할 수 있고, 더 세부적인 사항은 이미지 등록을 통해 결과를 등록합니다.'
+		});
+		
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
+
 <div class="main">
 	<div class="main-inner">
 		<div class="container">
 			<div class="row">
 				<div class="span12">
-					<div class="widget ">
+					<div class="widget" id="widget-1">
 						<div class="widget-header">
 							<i class="icon-user"></i>
 							<h3>등록 화면</h3>
@@ -82,7 +102,7 @@
 												<div class="form-actions">
 													<button id="submitBtn" type="submit"
 														class="btn btn-primary">접수하기</button>
-													<button class="btn">취소</button>
+													<button class="btn btn-primary" type="reset">취소</button>
 												</div>
 												<!-- /form-actions -->
 											</form>

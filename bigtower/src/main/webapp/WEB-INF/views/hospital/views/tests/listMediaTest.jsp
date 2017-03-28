@@ -1,13 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
+
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		
+		guidely.add ({
+			attachTo: '#widget-1'
+			, anchor: 'top-right'
+			, title: '영상검사 대기자 목록'
+			, text: '영상검사를 대기중인 환자들의 명단을 보여줍니다. 검사가 완료되면 버튼을 클릭하여 명단에서 제외시킵니다. 결과 등록 페이지로 이동하여 결과를 등록할 수 있습니다.'
+		});
+		
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
+
 <c:if test="${!empty mediaList}">
 	<div class="main">
 		<div class="main-inner">
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<div class="widget">
+						<div class="widget" id="widget-1">
 							<div class="widget-header">
 								<i class="icon-list-alt"></i>
 								<h3>영상촬영 검사대기 목록</h3>

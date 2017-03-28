@@ -1,12 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
+
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		
+		guidely.add ({
+			attachTo: '#widget-1'
+			, anchor: 'top-right'
+			, title: '건강검진 결과 등록'
+			, text: '건강검진 결과를 파일로 등록합니다.'
+		});
+		
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
+
 <div class="main">
 	<div class="main-inner">
 		<div class="container">
 			<div class="row">
 				<div class="span12">
-					<div class="widget ">
+					<div class="widget" id="widget-1">
 						<div class="widget-header">
 							<i class="icon-user"></i>
 							<h3>등록 화면</h3>
@@ -60,7 +81,7 @@
 												<div class="form-actions">
 													<button id="submitBtn" type="submit"
 														class="btn btn-primary">접수하기</button>
-													<button class="btn">취소</button>
+													<button class="btn btn-primary" type="reset">취소</button>
 												</div>
 												<!-- /form-actions -->
 											</form>

@@ -2,13 +2,33 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
 
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		
+		guidely.add ({
+			attachTo: '#widget-1'
+			, anchor: 'top-right'
+			, title: '혈액 검사 대기자 목록'
+			, text: '혈액 검사 대기자 명단을 보여주는 목록이며, 혈액검사 완료시 버튼을 클릭하여 대기자 명단에서 제외시킵니다. 제외된 환자는 결과등록에서 검사 결과를 등록할 수 있습니다.'
+		});
+		
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
+
 <c:if test="${!empty bloodList}">
 	<div class="main">
 		<div class="main-inner">
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<div class="widget">
+						<div class="widget" id="widget-1">
 							<div class="widget-header">
 								<i class="icon-list-alt"></i>
 								<h3>혈액 검사 대기 목록</h3>
