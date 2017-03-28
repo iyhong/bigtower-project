@@ -1,7 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
+<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-right'
+			, title: '해당 국민의 의료정보리스트'
+			, text: '입력받은 주민번호에 해당하는 국민의 모든 의료기록을 보여줍니다. 이 의료기록은 해당병원의 기록 뿐 아닌 타병원의 진료내역까지 보여줍니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-2'
+			, anchor: 'top-right'
+			, title: '해당 국민의 진료 정보리스트'
+			, text: '입력받은 주민번호에 해당하는 국민의 모든 진료기록을 보여줍니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-3'
+			, anchor: 'top-right'
+			, title: '해당 국민의 영상검사 정보리스트'
+			, text: '입력받은 주민번호에 해당하는 국민의 모든 영상검사기록을 보여줍니다. 영상검사시 찍었던 사진결과 역시 볼 수 있습니다.'
+		});
+
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
 <style>
+
 <!--
 @media (max-width: 1000px) {
 .widget {
@@ -27,7 +54,7 @@
 	      	
 	      	<div class="span12">      		
 	      		
-	      		<div class="widget ">
+	      		<div class="widget" id="target-1">
 	      			
 	      			<div class="widget-header">
 	      				<i class="icon-user"></i>
@@ -41,10 +68,10 @@
 						<div class="tabbable">
 						<ul class="nav nav-tabs">
 						  <li class="active">
-						    <a href="#treat" data-toggle="tab">진료</a>
+						    <a href="#treat" data-toggle="tab" id="target-2">진료</a>
 						  </li>
 						  <li>
-						  	<a href="#diagnosis" data-toggle="tab">진단</a>
+						  	<a href="#diagnosis" data-toggle="tab" id="">진단</a>
 					  	  </li>
 					  	  <li>
 						  	<a href="#prescription" data-toggle="tab">처방</a>
@@ -59,7 +86,7 @@
 						  	<a href="#bloodtest" data-toggle="tab">혈액검사</a>
 					  	  </li>
 					  	  <li>
-						  	<a href="#imagetest" data-toggle="tab">영상검사</a>
+						  	<a href="#imagetest" data-toggle="tab" id="target-3">영상검사</a>
 					  	  </li>
 					  	  <li>
 						  	<a href="#checkup" data-toggle="tab">건강검진</a>

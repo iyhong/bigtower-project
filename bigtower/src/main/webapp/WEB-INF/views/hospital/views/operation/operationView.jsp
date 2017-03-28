@@ -4,10 +4,32 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
 <script>
+
 	$(document).ready(function() {
+		$(function () {
+			guidely.add ({
+				attachTo: '#target-1'
+				, anchor: 'top-right'
+				, title: '수술일지작성'
+				, text: '수술이 시작되고 수술과정의 결과를 수술일지란에 기입합니다.'
+			});
+
+			guidely.init ({ welcome: true, startTrigger: false });
+		});
 		$("#submitBtn").click(function() {
-			$("#operationForm").submit();
+			if($("#hoOperationEndDate").val()===""){
+				alert("수술종료시간을 입력하세요");
+				return;
+			}
+			
+			
+			else{
+				$("#operationForm").submit();	
+			}
+			
 		});
 
 	});
@@ -17,7 +39,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="span12">
-					<div class="widget ">
+					<div class="widget" id="target-1">
 						<div class="widget-header">
 							<i class="icon-user"></i>
 							<h3>등록 화면</h3>
@@ -77,7 +99,7 @@
 													<div class="controls">
 														<input type="date"
 															value="${hoOperation.hoOperationEndDate}"
-															name="hoOperationEndDate">
+															name="hoOperationEndDate" id="hoOperationEndDate">
 													</div>
 													<!-- /controls -->
 												</div>
@@ -97,9 +119,9 @@
 												<!-- /control-group -->
 
 												<div class="form-actions">
-													<button id="submitBtn" type="submit"
+													<button id="submitBtn" type="button"
 														class="btn btn-primary">접수하기</button>
-													<button class="btn">취소</button>
+													<button class="btn" type="reset">취소</button>
 												</div>
 												<!-- /form-actions -->
 											</form>

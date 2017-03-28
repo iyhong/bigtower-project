@@ -1,13 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
+
+<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+
+
+
 <c:if test="${!empty hospitalizationRequestList}">
+<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-right'
+			, title: '입원대기 환자목록'
+			, text: '의사의 요청에 의해 입원수속중인 환자들의 목록입니다. 입원확인버튼을 누르면 입원이 되고 입원환자 목록을 보는페이지로 이동합니다.'
+		});
+
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
 	<div class="main">
 		<div class="main-inner">
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<div class="widget ">
+						<div class="widget" id="target-1">
 							<div class="widget-header">
 								<i class="icon-large icon-signin"></i>
 								<h3>입퇴원 요청 목록</h3>
@@ -53,12 +71,24 @@
 	<!-- /main -->
 </c:if>
 <c:if test="${empty hospitalizationRequestList}">
+<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-right'
+			, title: '입원대기 환자목록'
+			, text: '의사의 요청에 의해 입원수속중인 환자들의 목록입니다. 입원환자에 대한 요청이 없으면 화면에 목록이 없다는 메세지를 출력합니다.'
+		});
+
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
 	<div class="main">
 		<div class="main-inner">
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<div class="widget ">
+						<div class="widget"  id="target-1">
 							<div class="widget-header">
 								<i class="icon-list-alt"></i>
 								<h3>입퇴원 요청 목록</h3>
