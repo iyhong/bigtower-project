@@ -3,6 +3,23 @@
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-left'
+			, title: '접수 등록'
+			, text: '진료를 접수하는 화면입니다. 접수목적과 진료과목을 반드시 선택하셔야 합니다.'
+		});
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
 </head>
 <script>
 	$( document ).ready(function() {
@@ -41,7 +58,7 @@
   				</div> <!-- /widget-header -->
 					
 					<div class="widget-content">
-						<div class="tabbable">
+						<div id="target-1" class="tabbable">
 						<ul class="nav nav-tabs">
 						  <li class="active">
 						  	<a href="#formcontrols" data-toggle="tab">환자 접수</a>
@@ -122,7 +139,7 @@
 										
 										<div class="form-actions">
 											<button id="submitBtn" type="submit" class="btn btn-primary">접수하기</button> 
-											<button class="btn">취소</button>
+											<button class="btn" type="reset">취소</button>
 										</div> <!-- /form-actions -->
 									</form>
 								  </fieldset>

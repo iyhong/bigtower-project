@@ -12,8 +12,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getOneTreatByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getOneTreatByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getOneTreatByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getOneTreatByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -49,8 +49,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListTreatByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListTreatByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListTreatByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListTreatByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -86,8 +86,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListTreatByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListTreatByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListTreatByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListTreatByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -122,8 +122,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListDiagnosisByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListDiagnosisByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListDiagnosisByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListDiagnosisByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -159,8 +159,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListDiagnosisByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListDiagnosisByCitizenid?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListDiagnosisByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListDiagnosisByCitizenid?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -196,8 +196,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListDiagnosisByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListDiagnosisByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListDiagnosisByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListDiagnosisByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -228,8 +228,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListPrescriptionByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListPrescriptionByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListPrescriptionByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListPrescriptionByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -265,8 +265,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListPrescriptionByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListPrescriptionByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListPrescriptionByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListPrescriptionByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -302,8 +302,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListPrescriptionByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListPrescriptionByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListPrescriptionByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListPrescriptionByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -343,8 +343,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getOneSurgeryByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getOneSurgeryByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getOneSurgeryByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getOneSurgeryByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -380,8 +380,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListSurgeryByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListSurgeryByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListSurgeryByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListSurgeryByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -417,8 +417,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListSurgeryByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListSurgeryByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListSurgeryByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListSurgeryByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -453,8 +453,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getOneHospitalizationByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getOneHospitalizationByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getOneHospitalizationByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getOneHospitalizationByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -490,8 +490,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListHospitalizationByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListHospitalizationByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListHospitalizationByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListHospitalizationByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -531,8 +531,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getOneBloodTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getOneBloodTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getOneBloodTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getOneBloodTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -568,8 +568,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListBloodTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListBloodTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListBloodTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListBloodTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -605,8 +605,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListBloodTestResultByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListBloodTestResultByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListBloodTestResultByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListBloodTestResultByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -641,8 +641,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getOneImageTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getOneImageTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getOneImageTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getOneImageTestResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -678,8 +678,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListImageTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListImageTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListImageTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListImageTestResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -715,8 +715,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListImageTestResultByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListImageTestResultByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListImageTestResultByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListImageTestResultByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -751,8 +751,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getOneVaccinationResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getOneVaccinationResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getOneVaccinationResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getOneVaccinationResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -788,8 +788,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListVaccinationResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListVaccinationResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListVaccinationResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListVaccinationResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -825,8 +825,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListVaccinationResultByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListVaccinationResultByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListVaccinationResultByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListVaccinationResultByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -861,8 +861,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getOneCheckupResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getOneCheckupResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getOneCheckupResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getOneCheckupResultByTreatCode?treatCode=hospital_1_treatment_1&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -898,8 +898,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListCheckupResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListCheckupResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListCheckupResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListCheckupResultByCitizenId?citizenId=900101-1000001&doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -935,8 +935,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getListCheckupResultByDoctorId?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getListCheckupResultByDoctorId?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getListCheckupResultByDoctorId?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getListCheckupResultByDoctorId?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -971,8 +971,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getMedicineCode?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getMedicineCode?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getMedicineCode?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getMedicineCode?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -1003,8 +1003,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getDiseaseCode?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getDiseaseCode?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getDiseaseCode?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getDiseaseCode?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -1035,8 +1035,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getTreatSubjectCode?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getTreatSubjectCode?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getTreatSubjectCode?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getTreatSubjectCode?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -1067,8 +1067,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getSurgeryCode?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getSurgeryCode?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getSurgeryCode?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getSurgeryCode?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -1099,8 +1099,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/getVaccinationCode?doctorId=doctor_1">
-				http://loverman85.cafe24.com/bigbang/government/getVaccinationCode?doctorId=doctor_1</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/getVaccinationCode?doctorId=doctor_1">
+				http://bluesang7.cafe24.com/bigbang/government/getVaccinationCode?doctorId=doctor_1</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>
@@ -1135,8 +1135,8 @@
 			</tr>
 			<tr>
 				<td style="background-color: #BDBDBD;">요청URL :</td>
-				<td colspan="2"><a href="http://loverman85.cafe24.com/bigbang/government/checkCitizenId?citizenId=900101-1000001&doctorId=doctor_1&citizenName=도우너">
-				http://loverman85.cafe24.com/bigbang/government/checkCitizenId?citizenId=900101-1000001&doctorId=doctor_1&citizenName=도우너</a></td>
+				<td colspan="2"><a href="http://bluesang7.cafe24.com/bigbang/government/checkCitizenId?citizenId=900101-1000001&doctorId=doctor_1&citizenName=도우너">
+				http://bluesang7.cafe24.com/bigbang/government/checkCitizenId?citizenId=900101-1000001&doctorId=doctor_1&citizenName=도우너</a></td>
 			</tr>
 			<tr style="background-color: #BDBDBD;">
 				<td colspan="3">요청파라메터</td>

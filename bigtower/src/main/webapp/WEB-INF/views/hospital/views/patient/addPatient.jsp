@@ -3,6 +3,35 @@
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-left'
+			, title: '환자 등록'
+			, text: '환자를 등록하는 화면입니다. 모든 빈칸을 작성하셔야 합니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-2'
+			, anchor: 'top-right'
+			, title: '주민번호, 이름 조회'
+			, text: '정부에 저장되어있는 국민정보(주민번호, 이름)와 일치여부를 확인합니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-3'
+			, anchor: 'top-right'
+			, title: '우편번호 찾기'
+			, text: '다음에서 제공하는 우편번호 찾기 API를 활용하여 주소를 검색합니다.'
+		});
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
 <script>
 	function sample6_execDaumPostcode() {
 	    new daum.Postcode({
@@ -155,7 +184,7 @@
   				</div> <!-- /widget-header -->
 					
 					<div class="widget-content">
-						<div class="tabbable">
+						<div id="target-1" class="tabbable">
 						<ul class="nav nav-tabs">
 						  
 						  <li><a href="#formcontrols" data-toggle="tab">환자 등록</a></li>
@@ -178,7 +207,7 @@
 											<label class="control-label" for="lastname">환자명</label>
 											<div class="controls">
 												<input type="text" class="span4" name="hoPatientName" id="hoCitizenName" value="${hoPatientName}" >
-												<button class="btn" type="button" id="checkBtn">주민번호,이름 확인</button>
+												<button id="target-2" class="btn" type="button" id="checkBtn">주민번호,이름 확인</button>
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
@@ -195,7 +224,7 @@
 											<label class="control-label" for="password2">우편번호</label>
 											<div class="controls">
 												<input type="text" class="span4" name="hoZipCode" id="hoZipCode">
-												<input type="button" class="btn" onClick="sample6_execDaumPostcode()" value="우편번호 찾기">
+												<input id="target-3" type="button" class="btn" onClick="sample6_execDaumPostcode()" value="우편번호 찾기">
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										

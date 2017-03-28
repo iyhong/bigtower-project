@@ -1,13 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
+
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-left'
+			, title: '진료 대기자 목룍'
+			, text: '진료 대기중인 환자의 목록을 보여줍니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-2'
+			, anchor: 'top-right'
+			, title: '진료보기'
+			, text: '진료보기 버튼을 클릭하면 진료를 등록하는 페이지로 넘어갑니다.'
+		});
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
 <c:if test="${!empty treatList }">
 	<div class="main">
 		<div class="main-inner">
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<div class="widget">
+						<div id="target-1" class="widget">
 							<div class="widget-header">
 								<i class="icon-th-list"></i>
 								<h3>진료 대기자 목록</h3>
@@ -33,7 +57,7 @@
 												<td>${treat.hoTreatmentWriteDate }</td>
 												<td><a
 													href="<c:url value='/hospital/treatView?hoTreatmentCode=${treat.hoTreatmentCode}'/>">
-														<button>진료보기</button>
+														<button id="target-2">진료보기</button>
 												</a></td>
 											</tr>
 										</c:forEach>

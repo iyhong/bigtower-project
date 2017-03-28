@@ -3,6 +3,72 @@
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-left'
+			, title: '진료정보'
+			, text: '환자의 기본정보를 보여주고, 진료내용과 질병명(진단명)은 반드시 입력해야 합니다.'
+		});
+		guidely.add ({
+			attachTo: '#diseaseNameAdd'
+			, anchor: 'top-right'
+			, title: '진단 추가'
+			, text: '추가 버튼을 클릭하면 진단(질병)을 추가할 수 있습니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-3'
+			, anchor: 'top-right'
+			, title: '검사요청'
+			, text: '검사가 필요하다고 판단되면 클릭해서 박스를 열고, 요청할 검사 종류를 체크합니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-4'
+			, anchor: 'top-right'
+			, title: '입/퇴원 요청'
+			, text: '입원이 필요하다고 판단되면 클릭해서 박스를 열고, 입원에 체크합니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-5'
+			, anchor: 'top-right'
+			, title: '수술 요청'
+			, text: '수술이 필요하다고 판단되면 클릭해서 박스를 열고, 수술날짜와 수술명을 선택합니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-6'
+			, anchor: 'top-right'
+			, title: '예방접종 실시'
+			, text: '예방접종을 할경우 클릭해서 박스를 열고, 예방접종 종류를 선택하고 날짜를 입력합니다.'
+		});
+		
+		guidely.add ({
+			attachTo: '#target-7'
+			, anchor: 'top-right'
+			, title: '처방전 작성'
+			, text: '처방이 필요하다고 판단되면 처방할 약을 선택하고 투약량, 투약횟수, 투약일수 등을 입력합니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-8'
+			, anchor: 'top-right'
+			, title: '처방추가 버튼'
+			, text: '추가버튼을 클릭하여 다수의 약을 처방할수 있습니다.'
+		});
+		
+		guidely.add ({
+			attachTo: '#submitBtn'
+			, anchor: 'top-right'
+			, title: '진료 완료'
+			, text: '진료 완료버튼을 클릭하면 입력한 진료정보들을 등록합니다.'
+		});
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
 
 <script type="text/javascript">
 	$( document ).ready(function() {
@@ -71,7 +137,7 @@ align : right;
         </div>
       <div class="row">
         <div class="span6">
-          <div class="widget">
+          <div id="target-1" class="widget">
             <div class="widget-header"> <i class="icon-list-alt"></i>
               <h3> 진료 정보</h3>
             </div>
@@ -154,7 +220,7 @@ align : right;
 				<div class="controls">
 				
 	                 <!-- 검사요청 -->                      
-					 <div class="accordion" id="accordion">
+					 <div id="target-3" class="accordion" id="accordion">
 	                   <div class="accordion-group">
 	                     <div class="accordion-heading">
 	                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
@@ -171,7 +237,7 @@ align : right;
 	                   </div>
 	                 </div>
 	                 <!-- 입퇴원요청 -->  
-	                 <div class="accordion" id="accordion2">
+	                 <div id="target-4" class="accordion" id="accordion2">
 	                   <div class="accordion-group">
 	                     <div class="accordion-heading">
 	                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
@@ -188,7 +254,7 @@ align : right;
 	                 </div><!-- accordion -->
 	                 
 	                  <!-- 수술요청 -->
-	                 <div class="accordion" id="accordion3">
+	                 <div id="target-5" class="accordion" id="accordion3">
 	                   <div class="accordion-group">
 	                     <div class="accordion-heading">
 	                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
@@ -216,11 +282,11 @@ align : right;
 	                  </div><!-- accordion -->
 	                  
 	                  <!-- 입퇴원요청 -->  
-	                 <div class="accordion" id="accordion4">
+	                 <div id="target-6" class="accordion" id="accordion4">
 	                   <div class="accordion-group">
 	                     <div class="accordion-heading">
 	                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">
-	                         	예방접종 요청
+	                         	예방접종 실시
 	                       </a>
 	                     </div>
 	                     <div id="collapseFour" class="accordion-body collapse">
@@ -250,7 +316,7 @@ align : right;
           </div>
           <!-- /widget -->
           
-         <div class="widget">
+         <div id="target-7" class="widget">
           	<div class="widget-header"> <i class="icon-beaker"></i>
               <h3>처방전 작성</h3>
             </div>
@@ -266,7 +332,7 @@ align : right;
 										<option value="${medicineList.hoMedicineCode}">${medicineList.hoMedicineCode}(${medicineList.hoMedicineName})</option>
 									</c:forEach>                           			
 			            		</select>
-			            		<button type="button" id="medicineNameAdd">추가</button>
+			            		<button  id="target-8" type="button" id="medicineNameAdd">추가</button>
 			           		</div>
 							<div>
 								일일투약량 :
