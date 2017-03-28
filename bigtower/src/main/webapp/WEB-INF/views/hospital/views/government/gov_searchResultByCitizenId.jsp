@@ -29,20 +29,17 @@
 	</script>
 <style>
 
-<!--
-@media (max-width: 1000px) {
-.widget {
-	
-	position: relative;		
-	clear: both;		
-	width: auto;		
-	margin-bottom: 2em;		
-	overflow: auto;		
-	margin: auto auto 100px auto;
 
+.widget {
+    position: relative;
+    clear: both;
+    width: auto;
+    margin-bottom: 2em;
+    overflow: auto;
+    margin: 0px 0px 10px 0px;
 }
 
--->
+
 </style>
 <div class="main">
 	

@@ -110,7 +110,21 @@
 	</script>
 <!-- /사용자 메뉴얼 코드 시작 -->
 <style>
-<!--
+
+.widget {
+	
+	position: relative;
+	clear: both;
+	
+	width: auto;
+	
+	margin-bottom: 2em;
+		
+	overflow: hidden;
+	
+	margin: 0px 0px 20px 0px;
+}
+
 .mainSub {
     border-bottom: 1px solid #000;
 }
@@ -123,7 +137,7 @@
 		width: auto;
 	}
 }
--->
+
 </style>
 
 
