@@ -1,6 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-left'
+			, title: '접수 목록'
+			, text: '현재 접수등록된 환자들의 목록을 보여줍니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-2'
+			, anchor: 'top-right'
+			, title: '접수 완료'
+			, text: '접수완료 버튼을 클릭하면 접수가 완료되고 진료대기자 명단에 추가됩니다.'
+		});
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
 <style>
 
 th {
@@ -13,7 +36,7 @@ th {
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<div class="widget">
+						<div id="target-1" class="widget">
 							<div class="widget-header">
 								<i class="icon-th-list"></i>
 								<h3>접수 목록</h3>
@@ -42,7 +65,7 @@ th {
 												hoPatientCode=${ReceiveList.hoPatientCode}&
 												hoReceiveCode=${ReceiveList.hoReceiveCode}&
 												hoTreatSubjectCode=${ReceiveList.hoTreatSubjectCode}'/>">
-														<button>${ReceiveList.hoReceiveStateName }</button>
+														<button id="target-2">${ReceiveList.hoReceiveStateName }</button>
 												</a></td>
 											</tr>
 										</c:forEach>

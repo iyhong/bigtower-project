@@ -1,6 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp"%>
+<!-- 사용자 메뉴얼 코드 시작 -->
+	<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+	<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+	
+	<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-left'
+			, title: '환자 조회'
+			, text: '병원 DB에서 등록된 주민번호가 있는지 확인합니다. 만약 없다면 환자등록 페이지로 넘어가고, 있다면 접수등록 페이지로 넘어갑니다.'
+		});
+		
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+	</script>
+<!-- /사용자 메뉴얼 코드 시작 -->
 <div class="main">
 	<div class="main-inner">
 		<div class="container">
@@ -17,7 +34,7 @@
 
 
 
-							<div class="tabbable">
+							<div  id="target-1" class="tabbable">
 								<ul class="nav nav-tabs">
 									<li><a href="#formcontrols" data-toggle="tab">등록환자 조회</a>
 									</li>
@@ -53,7 +70,7 @@
 
 												<div class="form-actions">
 													<button type="submit" class="btn btn-primary">조회</button>
-													<button class="btn">취소</button>
+													<button class="btn" type="reset">취소</button>
 												</div>
 												<!-- /form-actions -->
 											</fieldset>
