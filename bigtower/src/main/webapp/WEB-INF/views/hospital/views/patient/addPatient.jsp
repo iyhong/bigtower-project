@@ -16,7 +16,7 @@
 			, text: '환자를 등록하는 화면입니다. 모든 빈칸을 작성하셔야 합니다.'
 		});
 		guidely.add ({
-			attachTo: '#target-2'
+			attachTo: '#checkBtn'
 			, anchor: 'top-right'
 			, title: '주민번호, 이름 조회'
 			, text: '정부에 저장되어있는 국민정보(주민번호, 이름)와 일치여부를 확인합니다.'
@@ -207,7 +207,7 @@
 											<label class="control-label" for="lastname">환자명</label>
 											<div class="controls">
 												<input type="text" class="span4" name="hoPatientName" id="hoCitizenName" value="${hoPatientName}" >
-												<button id="target-2" class="btn" type="button" id="checkBtn">주민번호,이름 확인</button>
+												<button class="btn" type="button" id="checkBtn">주민번호,이름 확인</button>
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
