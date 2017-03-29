@@ -53,7 +53,7 @@
 			, text: '처방이 필요하다고 판단되면 처방할 약을 선택하고 투약량, 투약횟수, 투약일수 등을 입력합니다.'
 		});
 		guidely.add ({
-			attachTo: '#target-8'
+			attachTo: '#medicineNameAdd'
 			, anchor: 'top-right'
 			, title: '처방추가 버튼'
 			, text: '추가버튼을 클릭하여 다수의 약을 처방할수 있습니다.'
@@ -112,22 +112,136 @@
 		
 		// 제출버튼 클릭시(유효성검사)
 		$("#submitBtn").click(function(){
-			console.log($("#diseaseSelect option:selected").val());
-			if($("#diseaseSelect option:selected").val()==='0'){
-				alert("질병코드를 선택하세요!")
-				return;
-			}if($("#hoTreatmentContents").val()===""){
-				alert("진료내용을 입력하세요!");
-				return;
-			}if($("#hoOperationTypeCode option:selected").val()!=="0"){
-				if($("#hoOperationStartDate").val()===""){
-					alert("수술예정일을 선택하세요");
+			function getDateDiff(date1,date2) {
+			    console.log('getDateDiff 함수실행');
+			    var arrDate1 = date1.split("-");
+			    var getDate1 = new Date(parseInt(arrDate1[0]),parseInt(arrDate1[1])-1,parseInt(arrDate1[2]));
+			    console.log('getDate1 : '+getDate1);
+			    var arrDate2 = date2.split("-");
+			    var getDate2 = new Date(parseInt(arrDate2[0]),parseInt(arrDate2[1])-1,parseInt(arrDate2[2]));
+			    console.log('getDate2 : '+getDate2);
+			    var getDiffTime = getDate1.getTime() - getDate2.getTime();
+			    return Math.floor(getDiffTime / (1000 * 60 * 60 * 24));
+			  }
+			
+			for(var i=0; i<$('.diseaseSelect').length-1;i++){
+				let value = $('.diseaseSelect option:selected')[i].value;
+				console.log(value);
+				if(value==="0"){
+					alert("질병코드를 선택하세요!")
 					return;
 				}
-			}if($("#hoVaccineTypeCode option:selected").val()!=="0"){
-				if($("#hoVaccineDate").val()===""){
+			}
+			if($("#hoTreatmentContents").val()===""){
+				alert("진료내용을 입력하세요!");
+				return;
+			//수술명을 선택하였거나, 수술예정일을 선택했을경우
+			}if($("#hoOperationTypeCode option:selected").val()!=="0"||$("#hoOperationStartDate").val()!==""){
+				if($("#hoOperationTypeCode option:selected").val()==="0"){
+					alert("수술명을 선택하세요");
+					return;
+				}if($("#hoOperationStartDate").val()===""){
+					alert("수술예정일을 선택하세요");
+					return;
+
+				//수술예정일을 선택했을경우 현재날짜랑 비교해서 이후날짜를 입력하도록 유도한다.
+				}else{
+					var nowDateJS = new Date();
+					var nowDate = nowDateJS.getFullYear()+'-'+(nowDateJS.getMonth()+1)+'-'+nowDateJS.getDate();
+					var hoOperationStartDate = $('#hoOperationStartDate').val();
+					console.log('현재날짜 : '+nowDate+" 입력한날짜:"+hoOperationStartDate);
+					var result = getDateDiff(nowDate, hoOperationStartDate);
+					console.log('result:'+result);
+				 	if(result>0){
+						alert('수술예정일 이후로 날짜를 입력해주세요')
+						return;
+					}
+				}
+			//예방접종 종류를 선택하였거나, 예방접종일을 선택했을경우
+			}if($("#hoVaccineTypeCode option:selected").val()!=="0"||$("#hoVaccineDate").val()!==""){
+				if($("#hoVaccineTypeCode option:selected").val()==="0"){
+					alert("예방접종 종류를 선택하세요");
+					return;
+				}if($("#hoVaccineDate").val()===""){
 					alert("예방접종일을 선택하세요");
 					return;
+				//예방접종일을 선택했을경우 현재날짜랑 비교해서 이후날짜를 입력하도록 유도한다.
+				}else{
+					var nowDateJS = new Date();
+					var nowDate = nowDateJS.getFullYear()+'-'+(nowDateJS.getMonth()+1)+'-'+nowDateJS.getDate();
+					var hoVaccineDate = $('#hoVaccineDate').val();
+					console.log('현재날짜 : '+nowDate+" 입력한날짜:"+hoVaccineDate);
+					var result = getDateDiff(nowDate, hoVaccineDate);
+					console.log('result:'+result);
+				 	if(result>0){
+						alert('수술예정일 이후로 날짜를 입력해주세요')
+						return;
+					}
+				}
+			
+			//처방약을 추가 안할경우
+			}if($('.hoMedicineCode option:selected').length<=2){
+				let hoMedicineCode = $('.hoMedicineCode option:selected')[0].value;
+				let hoPrescriptionDailydose = $('.hoPrescriptionDailydose')[0].value;
+				let hoPrescriptionDailycount = $('.hoPrescriptionDailycount')[0].value;
+				let hoPrescriptionTotalday = $('.hoPrescriptionTotalday')[0].value;
+				let hoPrescriptionUsage = $('.hoPrescriptionUsage')[0].value;
+//				console.log('약품명:'+hoMedicineCode);
+//				console.log('일일투약량:'+hoPrescriptionDailydose);
+//				console.log('일일투약횟수:'+hoPrescriptionDailycount);
+//				console.log('총투약일수:'+hoPrescriptionTotalday);
+//				console.log('용법:'+hoPrescriptionUsage);
+				if(hoMedicineCode!=="0"){
+					if(hoPrescriptionDailydose===""){
+						alert("일일투약량을 입력해주세요");
+						return;
+					}
+					if(hoPrescriptionDailycount===""){
+						alert("일일투약횟수를 입력해주세요");
+						return;
+					}
+					if(hoPrescriptionTotalday===""){
+						alert("총투약일수를 입력해주세요");
+						return;
+					}
+					if(hoPrescriptionUsage===""){
+						alert("용법을 입력해주세요");
+						return;
+					}
+				}
+			//처방약을 추가한 경우(추가된 횟수만큼 반복한다)
+			} else {
+				for(var i=0; i<$('.hoMedicineCode').length-1;i++){
+					let hoMedicineCode = $('.hoMedicineCode option:selected')[i].value;
+					let hoPrescriptionDailydose = $('.hoPrescriptionDailydose')[i].value;
+					let hoPrescriptionDailycount = $('.hoPrescriptionDailycount')[i].value;
+					let hoPrescriptionTotalday = $('.hoPrescriptionTotalday')[i].value;
+					let hoPrescriptionUsage = $('.hoPrescriptionUsage')[i].value;
+					//console.log('약품명:'+hoMedicineCode);
+					//console.log('일일투약량:'+hoPrescriptionDailydose);
+					//console.log('일일투약횟수:'+hoPrescriptionDailycount);
+					//console.log('총투약일수:'+hoPrescriptionTotalday);
+					//console.log('용법:'+hoPrescriptionUsage);
+					if(hoMedicineCode==="0"){
+						alert("약품명을 선택하세요");
+						return;
+					}
+					if(hoPrescriptionDailydose===""){
+						alert("일일투약량을 입력해주세요");
+						return;
+					}
+					if(hoPrescriptionDailycount===""){
+						alert("일일투약횟수를 입력해주세요");
+						return;
+					}
+					if(hoPrescriptionTotalday===""){
+						alert("총투약일수를 입력해주세요");
+						return;
+					}
+					if(hoPrescriptionUsage===""){
+						alert("용법을 입력해주세요");
+						return;
+					}
 				}
 			}
 			
@@ -186,7 +300,7 @@ align : right;
 								<label class="control-label" for="username">질병 선택</label>
 								<div id="prescription" class="controls">
 					           		<div>
-					            		<select id="diseaseSelect" name="diseaseSelect">
+					            		<select class="diseaseSelect" name="diseaseSelect">
 					            			<option value="0">질병명</option>
 							           		<c:forEach items="${diseaseList}" var="diseaseList">
 												<option value="${diseaseList.hoDiseaseCode}">${diseaseList.hoDiseaseCode}(${diseaseList.hoDiseaseKor})</option>
@@ -199,7 +313,7 @@ align : right;
 						        <!-- 질병 추가시 추가되는 폼 -->   	
 					           	<div id="hiddenPrescription" style="display: none;" class="control-group">
 					           		<div class="addDisease" class="controls">	
-					            		<select name="diseaseSelect">
+					            		<select class="diseaseSelect" name="diseaseSelect">
 					            			<!-- +버튼 눌렀을 때 추가되는 selectBox 마찬가지로 for문으로 list값 가져와야함 -->
 					            			<option value="0">질병명</option>
 					            			<c:forEach items="${diseaseList}" var="diseaseList">
@@ -281,10 +395,6 @@ align : right;
 	                     <div id="collapseThree" class="accordion-body collapse">
 	                       <div class="accordion-inner">
 					   			<div>
-						   			수술날짜 :
-						   			<input type="date" name="hoOperationStartDate" id="hoOperationStartDate">
-					   			</div>
-					   			<div>
 						   			수술명 :
 									<select name="hoOperationTypeCode" id="hoOperationTypeCode">
 										<option value="0">:::수술을 선택하시오:::</option>
@@ -293,6 +403,10 @@ align : right;
 										</c:forEach>
 									</select>
 								</div>
+					   			<div>
+						   			수술날짜 :
+						   			<input type="date" name="hoOperationStartDate" id="hoOperationStartDate">
+					   			</div>
 	                       </div> <!-- accordion-inner -->
 	                     </div><!-- accordion-body-->
 	                   </div><!-- accordion-group -->
@@ -343,36 +457,36 @@ align : right;
 						<div id="medicine">
 			           		<div>
 			           			약품명 : 
-			            		<select name="hoMedicineCode">
+			            		<select class="hoMedicineCode" name="hoMedicineCode">
 			            			<option value="0">약을 선택하시오</option>
 					           		<c:forEach items="${medicineList}" var="medicineList">
 										<option value="${medicineList.hoMedicineCode}">${medicineList.hoMedicineCode}(${medicineList.hoMedicineName})</option>
 									</c:forEach>                           			
 			            		</select>
-			            		<button  id="target-8" type="button" id="medicineNameAdd">추가</button>
+			            		<button type="button" id="medicineNameAdd">추가</button>
 			           		</div>
 							<div>
 								일일투약량 :
-								<input type="text" name="hoPrescriptionDailydose">mg/일
+								<input class="hoPrescriptionDailydose" type="text" name="hoPrescriptionDailydose">mg/일
 							</div>
 							<div>
 								일일투약횟수 :
-								<input type="text" name="hoPrescriptionDailycount">회/일
+								<input class="hoPrescriptionDailycount" type="text" name="hoPrescriptionDailycount">회/일
 							</div>
 							<div>
 								총투약일수 :
-								<input type="text" name="hoPrescriptionTotalday">일
+								<input class="hoPrescriptionTotalday" type="text" name="hoPrescriptionTotalday">일
 							</div>
 							<div>
 								용법 :
-								<input type="text" name="hoPrescriptionUsage">
+								<input class="hoPrescriptionUsage" type="text" name="hoPrescriptionUsage">
 							</div>
 			           	</div> <!-- /medicine -->
 			           	
 			           	<div id="hiddenMedicine" style="display: none;">
 			           		<div class="addMedicine">
 			           			약품명 :
-			            		<select name="hoMedicineCode">
+			            		<select class="hoMedicineCode" name="hoMedicineCode">
 			            			<!-- +버튼 눌렀을 때 추가되는 selectBox 마찬가지로 for문으로 list값 가져와야함 -->
 			            			<option value="0">약품명</option>
 			            			<c:forEach items="${medicineList}" var="medicineList">
@@ -383,19 +497,19 @@ align : right;
 			            		<button type="button" id="medicineNameRemove">삭제</button>        
 								<div>
 									일일투약량 :
-									<input type="text" name="hoPrescriptionDailydose">mg/일
+									<input class="hoPrescriptionDailydose" type="text" name="hoPrescriptionDailydose">mg/일
 								</div>
 								<div>
 									일일투약횟수 :
-									<input type="text" name="hoPrescriptionDailycount">회/일
+									<input class="hoPrescriptionDailycount" type="text" name="hoPrescriptionDailycount">회/일
 								</div>
 								<div>
 									총투약일수 :
-									<input type="text" name="hoPrescriptionTotalday">일
+									<input class="hoPrescriptionTotalday" type="text" name="hoPrescriptionTotalday">일
 								</div>
 								<div>
 									용법 :
-									<input type="text" name="hoPrescriptionUsage">
+									<input class="hoPrescriptionUsage" type="text" name="hoPrescriptionUsage">
 								</div>
 			           		</div>
            				</div><!-- /hiddenMedicine -->
