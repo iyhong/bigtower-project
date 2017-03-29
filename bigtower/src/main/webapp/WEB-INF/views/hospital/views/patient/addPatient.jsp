@@ -81,6 +81,7 @@
     		return location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
     	};
     	
+
     	
 
 	    //ajax실행
@@ -126,6 +127,7 @@
     	});
 	    
 	    $("#submitBtn").click(function(){
+	    	
 	    	console.log("클릭이벤트 발생");
 	    	if($("#hoCitizenId").val()===""){
 	    		alert('주민번호를 입력해주세요');
@@ -162,7 +164,7 @@
 	    	console.log("제출!");
 	    	$("#addPatientForm").submit();
 	    	
-	    })
+	    });
     });
 </script>
 	
@@ -245,8 +247,8 @@
 										
 										
 										<div class="form-actions">
-											<button type="submit" class="btn btn-primary">등록하기</button> 
-											<button class="btn">취소</button>
+											<button id="submitBtn" type="button" class="btn btn-primary">등록하기</button> 
+											<button class="btn" type="reset">취소</button>
 										</div> <!-- /form-actions -->
 									</fieldset>
 								</form>
