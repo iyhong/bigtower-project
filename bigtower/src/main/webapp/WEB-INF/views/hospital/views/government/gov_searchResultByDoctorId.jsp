@@ -2,20 +2,17 @@
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
 <style>
-<!--
-@media (max-width: 1000px) {
-.widget {
-	
-	position: relative;		
-	clear: both;		
-	width: auto;		
-	margin-bottom: 2em;		
-	overflow: auto;		
-	margin: auto auto 100px auto;
 
+
+.widget {
+    position: relative;
+    clear: both;
+    width: auto;
+    margin-bottom: 2em;
+    overflow: auto;
+    margin: 0px 0px 100px 0px;
 }
 
--->
 </style>
 <div class="main">
 	

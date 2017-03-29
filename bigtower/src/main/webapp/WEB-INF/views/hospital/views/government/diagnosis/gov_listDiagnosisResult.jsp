@@ -2,9 +2,6 @@
     pageEncoding="UTF-8"%>
 
 <div class="widget widget-table action-table">
-	<div class="widget-header">
-		<i class="icon-list-alt"></i>
-	</div>
 	<div class="widget-content">
 		<table class="table table-striped table-bordered">
 			<thead>
