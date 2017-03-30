@@ -81,7 +81,7 @@
 												<div class="form-actions">
 													<button id="submitBtn" type="submit"
 														class="btn btn-primary">접수하기</button>
-													<button class="btn btn-primary" type="reset">취소</button>
+													<button class="btn" type="reset">취소</button>
 												</div>
 												<!-- /form-actions -->
 											</form>
