@@ -1,6 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/hospital/views/module/top.jsp" %>
+
+<script src="<c:url value="/resources/bootstrap/js/guidely/guidely.min.js"/>"></script>
+<script src="<c:url value="/resources/bootstrap/js/base.js"/>"></script>
+<script>
+	$(function () {
+		guidely.add ({
+			attachTo: '#target-1'
+			, anchor: 'top-left'
+			, title: '나의 환자 조회'
+			, text: '내(의사)가 진료한 모든 국민의 의료기록을 보여줍니다. 이 의료기록은 해당병원의 기록 뿐 아닌 타병원의 진료내역까지 보여줍니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-2'
+			, anchor: 'top-right'
+			, title: '진료'
+			, text: '내(의사)가 진료한 모든 국민의 진료기록을 보여줍니다.'
+		});
+		guidely.add ({
+			attachTo: '#target-3'
+			, anchor: 'top-right'
+			, title: '영상검사'
+			, text: '내(의사)가 진료한 모든 국민의 영상검사기록을 보여줍니다. 영상검사시 찍었던 사진결과 역시 볼 수 있습니다.'
+		});
+
+		guidely.init ({ welcome: true, startTrigger: false });
+	});
+</script>
 <style>
 
 
@@ -24,7 +51,7 @@
 	      	
 	      	<div class="span12">      		
 	      		
-	      		<div class="widget ">
+	      		<div id="target-1" class="widget ">
 	      			
 	      			<div class="widget-header">
 	      				<i class="icon-user"></i>
@@ -38,7 +65,7 @@
 						<div class="tabbable">
 						<ul class="nav nav-tabs">
 						  <li class="active">
-						    <a href="#treat" data-toggle="tab">진료</a>
+						    <a href="#treat" data-toggle="tab" id="target-2">진료</a>
 						  </li>
 						  <li>
 						  	<a href="#diagnosis" data-toggle="tab">진단</a>
@@ -50,7 +77,7 @@
 						  	<a href="#surgery" data-toggle="tab">수술</a>
 					  	  </li>
 					  	  <li>
-						  	<a href="#bloodtest" data-toggle="tab">혈액검사</a>
+						  	<a href="#imagetest" data-toggle="tab" id="target-3">영상검사</a>
 					  	  </li>
 					  	  <li>
 						  	<a href="#imagetest" data-toggle="tab">영상검사</a>

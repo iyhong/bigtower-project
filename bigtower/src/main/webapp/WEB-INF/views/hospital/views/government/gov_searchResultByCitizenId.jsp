@@ -7,26 +7,26 @@
 	$(function () {
 		guidely.add ({
 			attachTo: '#target-1'
-			, anchor: 'top-right'
-			, title: '해당 국민의 의료정보리스트'
+			, anchor: 'top-left'
+			, title: '환자 조회 결과'
 			, text: '입력받은 주민번호에 해당하는 국민의 모든 의료기록을 보여줍니다. 이 의료기록은 해당병원의 기록 뿐 아닌 타병원의 진료내역까지 보여줍니다.'
 		});
 		guidely.add ({
 			attachTo: '#target-2'
 			, anchor: 'top-right'
-			, title: '해당 국민의 진료 정보리스트'
+			, title: '진료'
 			, text: '입력받은 주민번호에 해당하는 국민의 모든 진료기록을 보여줍니다.'
 		});
 		guidely.add ({
 			attachTo: '#target-3'
 			, anchor: 'top-right'
-			, title: '해당 국민의 영상검사 정보리스트'
+			, title: '혈액검사'
 			, text: '입력받은 주민번호에 해당하는 국민의 모든 영상검사기록을 보여줍니다. 영상검사시 찍었던 사진결과 역시 볼 수 있습니다.'
 		});
 
 		guidely.init ({ welcome: true, startTrigger: false });
 	});
-	</script>
+</script>
 <style>
 
 
