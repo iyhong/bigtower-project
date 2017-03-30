@@ -77,7 +77,7 @@
 						  	<a href="#surgery" data-toggle="tab">수술</a>
 					  	  </li>
 					  	  <li>
-						  	<a href="#imagetest" data-toggle="tab" id="target-3">영상검사</a>
+						  	<a href="#bloodtest" data-toggle="tab" id="target-3">혈액검사</a>
 					  	  </li>
 					  	  <li>
 						  	<a href="#imagetest" data-toggle="tab">영상검사</a>

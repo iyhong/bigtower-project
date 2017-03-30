@@ -72,7 +72,7 @@ public class GovernmentController {
 		model.addAttribute("imageTestList", map.get("imageTestList"));
 		model.addAttribute("checkupList", map.get("checkupList"));
 		model.addAttribute("vaccinationList", map.get("vaccinationList"));
-			
+		logger.debug("bloodTestList 확인 : "+ map.get("bloodTestList"));
 		return "/hospital/views/government/gov_searchResultByDoctorId";
 	}
 	

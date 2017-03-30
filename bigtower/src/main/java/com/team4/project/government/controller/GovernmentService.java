@@ -281,6 +281,7 @@ public class GovernmentService {
 			String returnBloodTest = conn.HttpUrlPOST(map);
 			logger.debug("returnBloodTest 확인 : "+returnBloodTest);
 			bloodTestList = gson.fromJson(returnBloodTest, new TypeToken<List<GoBloodTest>>(){}.getType() );
+			logger.debug("bloodTestList 확인 : "+bloodTestList);
 			resultMap.put("bloodTestList", bloodTestList);
 		} catch (Exception e) {
 			logger.debug("예외발생");
