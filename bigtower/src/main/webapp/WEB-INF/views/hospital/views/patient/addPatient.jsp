@@ -162,7 +162,7 @@
 	    		return;
 	    	}
 	    	console.log("제출!");
-	    	$("#addPatientForm").submit();
+	    	$("#edit-profile").submit();
 	    	
 	    });
     });
